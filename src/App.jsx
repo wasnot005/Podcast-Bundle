@@ -119,7 +119,7 @@ const AIAdvisorSlide = () => {
             Please provide a clear recommendation and a brief justification. Start with "Based on your needs, I'd recommend the..."
         `;
 
-        const apiKey = ""; // API key will be injected by the environment
+        const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // API key provided via Vite environment
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
         try {
